@@ -18,7 +18,6 @@ const BoardList = () => {
     // 페이지에 해당하는 게시물 가져오기
     const getBoardList = async () => {
       const page_number = searchParams.get("page");
-      console.log(page_number);
       const { data } = await axios.get(
         `/api/board/list?page_number=${page_number}&page_size=4`
       );

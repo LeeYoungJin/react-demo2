@@ -35,7 +35,7 @@ const AddBoard = () => {
 
       await api.post("/api/board", formData);
       window.alert("😎등록이 완료되었습니다😎");
-      navigate("/board-list");
+      navigate("/board-list?page=1");
     } catch (e) {
       // 서버에서 받은 에러 메시지 출력
       toast.error(
